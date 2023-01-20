@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo pwd
+pwd
 echo "Enter path to clone the repo"
 read MY_PATH
 echo "$MY_PATH"
