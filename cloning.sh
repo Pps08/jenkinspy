@@ -1,8 +1,10 @@
 #!/bin/bash
 
+echo pwd
 echo "Enter path to clone the repo"
 read MY_PATH
 echo "$MY_PATH"
+
 
 cd "$MY_PATH"
 ls
