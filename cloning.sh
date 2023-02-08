@@ -2,14 +2,11 @@
 
 pwd
 echo "Enter path to clone the repo"
-read MY_PATH
-echo "$MY_PATH"
-
-
-cd "$MY_PATH"
+MY_PATH=${WORKSPACE}
+cd "${WORKSPACE}"
 ls
 git clone https://github.com/sky-uk/dta-customer-tf
-cd "$MY_PATH/dta-customer-tf"
+cd "${WORKSPACE}/dta-customer-tf"
 echo "Enter jira branch name to be created"
 read MY_BRANCH
 git checkout -b "$MY_BRANCH"
