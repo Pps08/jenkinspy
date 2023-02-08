@@ -2,7 +2,6 @@
 echo "Enter path to clone the repo"
 MY_PATH=${WORKSPACE}
 cd "${WORKSPACE}"
-ls
 git clone https://github.com/sky-uk/dta-customer-tf
 cd "${WORKSPACE}/dta-customer-tf"
 echo "Enter jira branch name to be created"
