@@ -1,6 +1,4 @@
 #!/bin/bash
-
-pwd
 echo "Enter path to clone the repo"
 MY_PATH=${WORKSPACE}
 cd "${WORKSPACE}"
