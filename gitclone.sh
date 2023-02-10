@@ -32,6 +32,6 @@ git add .
 git commit -m "Adding new file from temp branch"
 git push origin "$MY_BRANCH"
 #Merge temp branch into jira branch
-git switch "$MY_BRANCH"
+git checkout "$MY_BRANCH"
 git merge "$temp_branch" -m "Merge branches"
 git push origin "$MY_BRANCH" 
