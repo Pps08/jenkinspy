@@ -1,20 +1,20 @@
 #!/bin/bash
 #"Cloning the repo locally"
 cd ${WORKSPACE}
-git clone https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/sky-uk/dta-customer-tf.git
-cd "${WORKSPACE}/dta-customer-tf"
+git clone https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/Pps08/jenkinspy.git
+cd "${WORKSPACE}/jenkinspy"
 #"Create a temp branch from dev branch and add code to it"
 echo "Enter temp branch name to be created"
 git branch "$temp_branch" develop
 git push -u origin "$temp_branch"
 git switch "$temp_branch"
-mkdir "${WORKSPACE}/dta-customer-tf/batch_application/scripts/sql/temp2"
-cd "${WORKSPACE}/dta-customer-tf/batch_application/scripts/sql/temp2"
+mkdir "${WORKSPACE}/jenkinspy/temp2"
+cd "${WORKSPACE}/jenkinspy/temp2"
 touch test1.sql
 echo "Adding first file" > test1.sql
 touch test2.sql
 echo "Adding second file" > test2.sql
-#cd "${WORKSPACE}/dta-customer-tf/batch_application/scripts/sql/"
+#cd "${WORKSPACE}/jenkinspy/"
 git add .
 git commit -m "Adding new folder"
 git push origin "$temp_branch"
@@ -24,10 +24,10 @@ git branch "$MY_BRANCH" develop
 git push -u origin "$MY_BRANCH"
 git switch "$MY_BRANCH"
 echo "Enter absolute path of the script to be merged into jira branch"
-git checkout "$temp_branch" "${WORKSPACE}/dta-customer-tf/$My_file"
-#git checkout "$temp_branch" "${WORKSPACE}/dta-customer-tf/batch_application/scripts/sql/temp2/test1.sql"
-echo "${WORKSPACE}/dta-customer-tf/$My_file"
-#git checkout "$temp_branch" "${WORKSPACE}/$My_file"
+git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
+#git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/test1.sql"
+echo "${WORKSPACE}/jenkinspy/$My_file"
+#git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
 git add .
 git commit -m "Adding new file from temp branch"
 git push origin "$MY_BRANCH"
