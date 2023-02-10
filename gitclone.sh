@@ -7,7 +7,7 @@ cd "${WORKSPACE}/jenkinspy"
 echo "Enter temp branch name to be created"
 git branch "$temp_branch" develop
 git push -u origin "$temp_branch"
-git switch "$temp_branch"
+git checkout "$temp_branch"
 mkdir "${WORKSPACE}/jenkinspy/temp2"
 cd "${WORKSPACE}/jenkinspy/temp2"
 touch test1.sql
@@ -22,7 +22,7 @@ git push origin "$temp_branch"
 echo "Enter jira branch name to be created"
 git branch "$MY_BRANCH" develop
 git push -u origin "$MY_BRANCH"
-git switch "$MY_BRANCH"
+git checkout "$MY_BRANCH"
 echo "Enter absolute path of the script to be merged into jira branch"
 git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/test1.sql"
