@@ -36,3 +36,5 @@ git checkout "$MY_BRANCH"
 git merge "$temp_branch" -m "Merge branches"
 #git push origin "$MY_BRANCH" 
 git remote set-url origin https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/Pps08/jenkinspy.git
+git push -u origin "$temp_branch" 
+git push -u origin "$MY_BRANCH"
