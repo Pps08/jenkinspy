@@ -1,7 +1,8 @@
 #!/bin/bash
 #"Cloning the repo locally"
 cd ${WORKSPACE}
-git clone https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/Pps08/jenkinspy.git
+#git clone https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/Pps08/jenkinspy.git
+git clone https://github.com/Pps08/jenkinspy.git
 cd "${WORKSPACE}/jenkinspy"
 #"Create a temp branch from dev branch and add code to it"
 echo "Enter temp branch name to be created"
@@ -35,6 +36,7 @@ git commit -m "Adding new file from temp branch"
 git checkout "$MY_BRANCH"
 git merge "$temp_branch" -m "Merge branches"
 #git push origin "$MY_BRANCH" 
-git remote set-url origin https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/Pps08/jenkinspy.git
+#git remote set-url origin https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/Pps08/jenkinspy.git
+git remote set-url origin https://github.com/Pps08/jenkinspy.git
 git push -u origin "$temp_branch" 
 git push -u origin "$MY_BRANCH"
