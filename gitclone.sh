@@ -35,3 +35,4 @@ git commit -m "Adding new file from temp branch"
 git checkout "$MY_BRANCH"
 git merge "$temp_branch" -m "Merge branches"
 #git push origin "$MY_BRANCH" 
+git remote set-url origin https://github.com/Pps08/jenkinspy.git
