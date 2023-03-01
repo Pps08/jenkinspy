@@ -47,4 +47,4 @@ git checkout "$MY_BRANCH"
 echo "#PRbody"
 PRbody=$(<"$PRbody")
 
-gh pr create --title "$PRtitle" --body "$PRbody" --draft
+#gh pr create --title "$PRtitle" --body "$PRbody" --draft
