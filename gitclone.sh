@@ -28,7 +28,7 @@ git checkout "$MY_BRANCH"
 echo "Enter absolute path of the script to be merged into jira branch"
 git checkout "$temp_branch" "${WORKSPACE}\jenkinspy\$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/temp2/test1.sql"
-echo "${WORKSPACE}/jenkinspy/$My_file"
+echo "${WORKSPACE}\jenkinspy\$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
 git add .
 git commit -m "Adding new file from temp branch"
@@ -36,15 +36,10 @@ git commit -m "Adding new file from temp branch"
 #Merge temp branch into jira branch
 git checkout "$MY_BRANCH"
 git merge "$temp_branch" -m "Merge branches"
-#git push origin "$MY_BRANCH" 
-#git remote set-url origin https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/Pps08/jenkinspy.git
-#git remote set-url origin https://SVC-DTA-TES:bb7aa198-415e-411a-a76f-29a8dec40445@github.com/Pps08/jenkinspy.git
-#https://pps08:Pp!9176277347
 git push -u origin "$temp_branch" 
 git push -u origin "$MY_BRANCH"
 #Create Draft PR
 git checkout "$MY_BRANCH"
 echo "#PRbody"
 PRbody=$(<"$PRbody")
-
-#gh pr create --title "$PRtitle" --body "$PRbody" --draft
+#gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
