@@ -1,6 +1,6 @@
 #!/bin/bash
 #"Cloning the repo locally"
-cd ${WORKSPACE}
+cd "${WORKSPACE}"
 #git clone https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/Pps08/jenkinspy.git
 git clone https://github.com/Pps08/jenkinspy.git
 git_token='02b772a70f3c23e41d2231adec6778ac392cebd4'
@@ -40,6 +40,6 @@ git push -u origin "$temp_branch"
 git push -u origin "$MY_BRANCH"
 #Create Draft PR
 git checkout "$MY_BRANCH"
-echo "#PRbody"
+echo "$PRbody"
 PRbody=$(<"$PRbody")
 #gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
