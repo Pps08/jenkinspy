@@ -44,4 +44,4 @@ git push -u origin "$temp_branch"
 git push -u origin "$MY_BRANCH"
 #Create Draft PR
 git checkout "$MY_BRANCH"
-gh pr create --title "Trial" --body $body --draft
+gh pr create --title $PRtitle --body $PRbody --draft
