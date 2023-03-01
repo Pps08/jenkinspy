@@ -40,6 +40,7 @@ git push origin "$temp_branch"
 git push origin "$MY_BRANCH"
 #Create Draft PR
 git checkout "$MY_BRANCH"
-echo "$PRbody"
-PRbody=$(<"$PRbody")
+echo "$(<$WORKSPACE}/jenkinspy/PRbody.txt)" 
+PRbody=$(<$WORKSPACE}/jenkinspy/PRbody.txt)
+echo PRbody
 #gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
