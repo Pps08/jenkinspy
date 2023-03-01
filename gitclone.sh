@@ -26,7 +26,7 @@ git checkout -b "$MY_BRANCH"
 #git push -u origin "$MY_BRANCH"
 git checkout "$MY_BRANCH"
 echo "Enter absolute path of the script to be merged into jira branch"
-git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
+git checkout "$temp_branch" "${WORKSPACE}\jenkinspy\$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/temp2/test1.sql"
 echo "${WORKSPACE}/jenkinspy/$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
@@ -44,5 +44,7 @@ git push -u origin "$temp_branch"
 git push -u origin "$MY_BRANCH"
 #Create Draft PR
 git checkout "$MY_BRANCH"
+echo "#PRbody"
 PRbody=$(<"$PRbody")
+
 gh pr create --title "$PRtitle" --body "$PRbody" --draft
