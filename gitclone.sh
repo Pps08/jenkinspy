@@ -43,5 +43,4 @@ git push origin "$MY_BRANCH"
 git checkout "$MY_BRANCH"
 echo "$(<"${WORKSPACE}\PR\PRbody.txt")" 
 PRbody=$(<"${WORKSPACE}\PR\PRbody.txt")
-echo "$PRbody"
-#gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
+gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
