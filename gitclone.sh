@@ -26,10 +26,10 @@ git checkout -b "$MY_BRANCH" main
 #git push -u origin "$MY_BRANCH"
 git checkout "$MY_BRANCH"
 echo "Enter absolute path of the script to be merged into jira branch"
-git checkout "$temp_branch" "${WORKSPACE}\jenkinspy\$My_file"
+git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/temp2/test1.sql"
 echo "${WORKSPACE}\jenkinspy\$My_file"
-#git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
+#git checkout "$temp_branch" "${WORKSPACE}jenkinspy/$My_file"
 git add .
 git commit -m "Adding new file from temp branch"
 #git push origin "$MY_BRANCH"
