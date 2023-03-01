@@ -33,6 +33,7 @@ echo "${WORKSPACE}\jenkinspy\$My_file"
 git add .
 git commit -m "Adding new file from temp branch"
 #git push origin "$MY_BRANCH"
+echo "Merging"
 #Merge temp branch into jira branch
 git checkout "$MY_BRANCH"
 git merge "$temp_branch" -m "Merge branches"
@@ -40,7 +41,7 @@ git push origin "$temp_branch"
 git push origin "$MY_BRANCH"
 #Create Draft PR
 git checkout "$MY_BRANCH"
-echo "$(<"$WORKSPACE}/jenkinspy/PRbody.txt")" 
-PRbody=$(<"$WORKSPACE}/jenkinspy/PRbody.txt")
+echo "$(<"$WORKSPACE}\jenkinspy\PRbody.txt")" 
+PRbody=$(<"$WORKSPACE}\jenkinspy\PRbody.txt")
 echo "$PRbody"
 #gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
