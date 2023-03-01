@@ -7,7 +7,7 @@ git_token='02b772a70f3c23e41d2231adec6778ac392cebd4'
 cd "${WORKSPACE}/jenkinspy"
 #"Create a temp branch from dev branch and add code to it"
 echo "Enter temp branch name to be created"
-git checkout -b "$temp_branch"
+git checkout -b "$temp_branch" main
 #git push -u origin "$temp_branch"
 git checkout "$temp_branch"
 mkdir "${WORKSPACE}/jenkinspy/temp2"
@@ -22,7 +22,7 @@ git commit -m "Adding new folder"
 #git push origin "$temp_branch"
 #"Create jira branch from latest dev  and add temp branch code into it"
 echo "Enter jira branch name to be created"
-git checkout -b "$MY_BRANCH"
+git checkout -b "$MY_BRANCH" main
 #git push -u origin "$MY_BRANCH"
 git checkout "$MY_BRANCH"
 echo "Enter absolute path of the script to be merged into jira branch"
