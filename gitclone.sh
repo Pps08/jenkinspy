@@ -36,11 +36,14 @@ git commit -m "Adding new file from temp branch"
 echo "Merging"
 #Merge temp branch into jira branch
 git checkout "$MY_BRANCH"
+echo "merge started"
 git merge "$temp_branch" -m "Merge branches"
+echo "pushing to remote"
 git push origin "$temp_branch" 
 git push origin "$MY_BRANCH"
 #Create Draft PR
 git checkout "$MY_BRANCH"
+echo "creating PR"
 echo "$(<"${WORKSPACE}\PR\PRbody.txt")" 
 PRbody=$(<"${WORKSPACE}\PR\PRbody.txt")
 gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
