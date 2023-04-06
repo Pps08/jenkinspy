@@ -1,3 +1,4 @@
+echo "hi"
 username='priya_parthasarathy_sky_uk'
 hostname='10.53.88.219'
 PPK_FILE="C:\Users\pps08\.gcp_putty_ssh\id_rsa.ppk" 
