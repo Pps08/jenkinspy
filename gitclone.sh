@@ -46,4 +46,4 @@ git checkout "$MY_BRANCH"
 echo "creating PR"
 echo "$(<"${WORKSPACE}\PRbody.txt")" 
 PRbody=$(<"${WORKSPACE}\PRbody.txt")
-"${WORKSPACE}"\gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
+"${WORKSPACE}"/gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
