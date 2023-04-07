@@ -46,5 +46,5 @@ git checkout "$MY_BRANCH"
 echo "creating PR"
 echo "$(<"${WORKSPACE}\PRbody.txt")" 
 PRbody=$(<"${WORKSPACE}\PRbody.txt")
-export GH_TOKEN='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'
+export GH_TOKEN='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'
 "${WORKSPACE}"/gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
