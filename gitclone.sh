@@ -39,11 +39,11 @@ git checkout "$MY_BRANCH"
 echo "merge started"
 git merge "$temp_branch" -m "Merge branches"
 echo "pushing to remote"
-git push origin "$temp_branch" 
-git push origin "$MY_BRANCH"
+#git push origin "$temp_branch" 
+#git push origin "$MY_BRANCH"
 #Create Draft PR
-git checkout "$MY_BRANCH"
-echo "creating PR"
-echo "$(<"${WORKSPACE}\PR\PRbody.txt")" 
-PRbody=$(<"${WORKSPACE}\PR\PRbody.txt")
-gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
+#git checkout "$MY_BRANCH"
+#echo "creating PR"
+#echo "$(<"${WORKSPACE}\PR\PRbody.txt")" 
+#PRbody=$(<"${WORKSPACE}\PR\PRbody.txt")
+#gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
