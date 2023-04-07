@@ -47,6 +47,6 @@ echo "creating PR"
 echo "$(<"${WORKSPACE}\PRbody.txt")" 
 PRbody=$(<"${WORKSPACE}\PRbody.txt")
 #GH_TOKEN='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'
-gh auth login --with-token < GH_Token.txt
+"${WORKSPACE}"/gh auth login --with-token < "${WORKSPACE}"/GH_Token.txt
 #gh auth login --with-token 
 "${WORKSPACE}"/gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
