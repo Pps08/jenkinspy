@@ -46,7 +46,7 @@ git checkout "$MY_BRANCH"
 echo "creating PR"
 echo "$(<"${WORKSPACE}\PRbody.txt")" 
 PRbody=$(<"${WORKSPACE}\PRbody.txt")
-GH_TOKEN='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'
-echo "$GH_TOKEN" | gh auth login --with-token 
-#gh auth login --with-token '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'
+#GH_TOKEN='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'
+gh auth login --with-token ${GH_TOKEN}
+gh auth login --with-token 
 "${WORKSPACE}"/gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
