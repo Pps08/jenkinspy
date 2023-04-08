@@ -62,5 +62,5 @@ PRbody=$(<"${WORKSPACE}\PRbody.txt")
 #ghpath= "C:\\Program Files\\GitHub CLI\\"
 cd "${WORKSPACE}"
 ls -lrt "${WORKSPACE}"
-sh "${WORKSPACE}"\gh.exe --version
+sh "${WORKSPACE}"\\gh.exe --version
 #${ghpath}\gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
