@@ -56,7 +56,7 @@ PRbody=$(<"${WORKSPACE}\PRbody.txt")
 #curl -u pps08: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 https://api.github.com/user
 #echo $GH_TOKEN | GH_TOKEN= "${WORKSPACE}"/gh auth login --with-token
 #GH_TOKEN='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'
-"${WORKSPACE}"/gh auth login
+#"${WORKSPACE}"/gh auth login
 #"${WORKSPACE}"/gh auth login -h github.com --with-token < "${WORKSPACE}"/GH_Token.txt
 #gh auth login -h github.com --with-token 
-"${WORKSPACE}"/gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
+#"${WORKSPACE}"/gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
