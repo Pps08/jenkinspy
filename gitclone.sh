@@ -60,4 +60,4 @@ PRbody=$(<"${WORKSPACE}\PRbody.txt")
 #"${WORKSPACE}"/gh auth login -h github.com --with-token < "${WORKSPACE}"/GH_Token.txt
 #gh auth login -h github.com --with-token 
 gh --version
-gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
+/c/Program Files/GitHub CLI/gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
