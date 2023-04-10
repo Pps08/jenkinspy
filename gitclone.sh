@@ -21,10 +21,10 @@ git add .
 git commit -m "Adding new folder"
 #git push origin "$temp_branch"
 #"Create jira branch from latest dev  and add temp branch code into it"
-echo "Enter jira branch name to be created"
-git checkout -b "$MY_BRANCH" main
+echo "Enter jira branch name to be created from latest dev"
+git checkout -b "$latest_branch" main
 #git push -u origin "$latest_branch"
-git checkout "$latest_branch"
+#git checkout "$latest_branch"
 #echo "Enter absolute path of the script to be merged into jira branch"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/temp2/test1.sql"
