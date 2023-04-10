@@ -63,4 +63,5 @@ PRbody=$(<"${WORKSPACE}\PRbody.txt")
 #cd "${WORKSPACE}"
 #ls -lrt "${WORKSPACE}"
 #sh "${WORKSPACE}"\\gh.exe --version
-#${ghpath}\gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
+echo "creating Pull Request"
+gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
