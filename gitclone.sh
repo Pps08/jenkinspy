@@ -63,6 +63,11 @@ PRbody=$(<"${WORKSPACE}\PRbody.txt")
 #cd "${WORKSPACE}"
 #ls -lrt "${WORKSPACE}"
 #sh "${WORKSPACE}"\\gh.exe --version
-"${WORKSPACE}"\\gh auth login --with-token < "${WORKSPACE}"\\mytoken.txt
-echo "creating Pull Request"
+#"${WORKSPACE}"\\gh auth login --with-token < "${WORKSPACE}"\\mytoken.txt
+#echo "creating Pull Request"
 #"${WORKSPACE}"\\gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
+set -u
+echo "$GITHUB_TOKEN" > .githubtoken
+unset GITHUB_TOKEN
+gh auth login --with-token < .githubtoken
+rm .githubtoken
