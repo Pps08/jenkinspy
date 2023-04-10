@@ -45,7 +45,7 @@ echo "pushing to remote"
 git checkout "$latest_branch"
 echo "creating PR"
 #echo "$(<"${WORKSPACE}\PRbody.txt")" 
-PRbody=$(<"${WORKSPACE}\PRbody.txt")
+#PRbody=$(<"${WORKSPACE}\PRbody.txt")
 #GIT_TOKEN=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
 #GIT_API="https://api.github.com"
  #curl -s -L \
