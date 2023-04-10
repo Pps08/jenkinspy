@@ -69,5 +69,6 @@ PRbody=$(<"${WORKSPACE}\PRbody.txt")
 set +u
 echo "$GITHUB_TOKEN" > .githubtoken
 "${WORKSPACE}"\\gh auth login --with-token < .githubtoken
+"${WORKSPACE}"\\gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
 unset GITHUB_TOKEN
 rm .githubtoken
