@@ -25,15 +25,15 @@ echo "Enter jira branch name to be created"
 git checkout -b "$MY_BRANCH" main
 #git push -u origin "$latest_branch"
 git checkout "$latest_branch"
-echo "Enter absolute path of the script to be merged into jira branch"
-git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
+#echo "Enter absolute path of the script to be merged into jira branch"
+#git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/temp2/test1.sql"
-echo "${WORKSPACE}\jenkinspy\$My_file"
+#echo "${WORKSPACE}\jenkinspy\$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}jenkinspy/$My_file"
-git add .
-git commit -m "Adding new file from temp branch"
+#git add .
+#git commit -m "Adding new file from temp branch"
 #git push origin "$latest_branch"
-echo "Merging"
+#echo "Merging"
 #Merge temp branch into jira branch
 git checkout "$latest_branch"
 echo "merge started"
@@ -58,8 +58,7 @@ PRbody=$(<"${WORKSPACE}\PRbody.txt")
 #GH_TOKEN='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'
 #"${WORKSPACE}"/gh auth login
 #"${WORKSPACE}"/gh auth login -h github.com --with-token < "${WORKSPACE}"/GH_Token.txt
-#gh auth login -h github.com --with-token 
-
+#gh auth login -h github.com --with-token "
 #ghpath= "C:\\Program Files\\GitHub CLI\\"
 #cd "${WORKSPACE}"
 #ls -lrt "${WORKSPACE}"
@@ -75,4 +74,3 @@ git push origin "$latest_branch"
 "${WORKSPACE}"\\gh pr create --head "$latest_branch" --title "$PRtitle" --body "$PRbody" --draft
 unset GITHUB_TOKEN
 rm .githubtoken
-echo "Pull request created"
