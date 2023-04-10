@@ -23,8 +23,8 @@ git commit -m "Adding new folder"
 #"Create jira branch from latest dev  and add temp branch code into it"
 echo "Enter jira branch name to be created"
 git checkout -b "$MY_BRANCH" main
-#git push -u origin "$MY_BRANCH"
-git checkout "$MY_BRANCH"
+#git push -u origin "$latest_branch"
+git checkout "$latest_branch"
 echo "Enter absolute path of the script to be merged into jira branch"
 git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}/jenkinspy/temp2/test1.sql"
@@ -32,17 +32,17 @@ echo "${WORKSPACE}\jenkinspy\$My_file"
 #git checkout "$temp_branch" "${WORKSPACE}jenkinspy/$My_file"
 git add .
 git commit -m "Adding new file from temp branch"
-#git push origin "$MY_BRANCH"
+#git push origin "$latest_branch"
 echo "Merging"
 #Merge temp branch into jira branch
-git checkout "$MY_BRANCH"
+git checkout "$latest_branch"
 echo "merge started"
 git merge "$temp_branch" -m "Merge branches"
 echo "pushing to remote"
 #git push origin "$temp_branch" 
-#git push origin "$MY_BRANCH"
+#git push origin "$latest_branch"
 #Create Draft PR
-git checkout "$MY_BRANCH"
+git checkout "$latest_branch"
 echo "creating PR"
 #echo "$(<"${WORKSPACE}\PRbody.txt")" 
 PRbody=$(<"${WORKSPACE}\PRbody.txt")
@@ -58,19 +58,21 @@ PRbody=$(<"${WORKSPACE}\PRbody.txt")
 #GH_TOKEN='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'
 #"${WORKSPACE}"/gh auth login
 #"${WORKSPACE}"/gh auth login -h github.com --with-token < "${WORKSPACE}"/GH_Token.txt
-#gh auth login -h github.com --with-token "
+#gh auth login -h github.com --with-token 
+
 #ghpath= "C:\\Program Files\\GitHub CLI\\"
 #cd "${WORKSPACE}"
 #ls -lrt "${WORKSPACE}"
 #sh "${WORKSPACE}"\\gh.exe --version
 #"${WORKSPACE}"\\gh auth login --with-token < "${WORKSPACE}"\\mytoken.txt
 #echo "creating Pull Request"
-#"${WORKSPACE}"\\gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
+#"${WORKSPACE}"\\gh pr create --head "$latest_branch" --title "$PRtitle" --body "$PRbody" --draft
 set +u
 echo "$GITHUB_TOKEN" > .githubtoken
 git push origin "$temp_branch" 
-git push origin "$MY_BRANCH"
+git push origin "$latest_branch"
 "${WORKSPACE}"\\gh auth login --with-token < .githubtoken
-"${WORKSPACE}"\\gh pr create --head "$MY_BRANCH" --title "$PRtitle" --body "$PRbody" --draft
+"${WORKSPACE}"\\gh pr create --head "$latest_branch" --title "$PRtitle" --body "$PRbody" --draft
 unset GITHUB_TOKEN
 rm .githubtoken
+echo "Pull request created"
