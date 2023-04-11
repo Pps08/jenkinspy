@@ -1,4 +1,5 @@
 #!/bin/perl -w
+perl -v
 use MIME::Lite;
 $to = $recepient;
 $from = $recepient;
