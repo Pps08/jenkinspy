@@ -1,5 +1,5 @@
 #!/bin/perl -w
-/usr/bin/perl -v
+'''#!/usr/bin/perl -v'''
 use MIME::Lite;
 $to = $recepient;
 $from = $recepient;
