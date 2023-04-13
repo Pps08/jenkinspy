@@ -1,6 +1,6 @@
 #!/bin/perl -w
 
-use MIME::Lite;
+use MIME::Base64;
 $to = $recepient;
 $from = $recepient;
 $subject = 'QG mail';
