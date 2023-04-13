@@ -1,12 +1,12 @@
 #!/bin/perl -w
 
-use MIME::Base64;
+use MIME::Lite;
 $to = $recepient;
 $from = $recepient;
 $subject = 'QG mail';
 $message = $deploycommand;
  
-$msg = MIME::Base64->new(
+$msg = MIME::Lite->new(
 From => $from,
 To => $to,
 Subject => "$subject",
