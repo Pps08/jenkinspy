@@ -6,7 +6,7 @@ $from = $recepient;
 $subject = 'QG mail';
 $message = $deploycommand;
  
-$msg = MIME::Lite->new(
+$msg = MIME::Base64->new(
 From => $from,
 To => $to,
 Subject => "$subject",
