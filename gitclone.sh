@@ -74,4 +74,5 @@ git push origin "$latest_branch"
 "${WORKSPACE}"\\gh pr create --head "$latest_branch" --title "$PRtitle" --body "$PRbody" --draft
 unset GITHUB_TOKEN
 rm .githubtoken
-/usr/bin/perl ${WORKSPACE}/sendmail.pl $recepient $deploycommand
+#/usr/bin/perl ${WORKSPACE}/sendmail.pl $recepient $deploycommand
+${WORKSPACE}/sendmail.py  "$recepient" "$deploycommand"
