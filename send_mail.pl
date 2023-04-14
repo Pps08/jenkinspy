@@ -1,8 +1,8 @@
 use Mail::Sendmail;
  
-%mail = ( To      => $recepient,
-          From    => $recepient,
-          Message => $deploycommand
+%mail = ( To      => "priya_parthasarathy@sky.uk",
+          From    => "priya_parthasarathy@sky.uk",
+          Message => "Deploycommand"
          );
  
 sendmail(%mail) or die $Mail::Sendmail::error;
