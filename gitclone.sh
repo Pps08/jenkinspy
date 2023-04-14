@@ -1,5 +1,6 @@
 #!/bin/bash
-#"Cloning the repo locally"
+rm #"Cloning the repo locally"
+rm "${WORKSPACE}/jenkinspy"
 cd "${WORKSPACE}"
 #git clone https://02b772a70f3c23e41d2231adec6778ac392cebd4@github.com/Pps08/jenkinspy.git
 git clone https://github.com/Pps08/jenkinspy.git
