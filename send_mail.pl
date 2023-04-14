@@ -1,7 +1,7 @@
 use Mail::Sendmail;
  
-%mail = ( To      => "priya.parthasarathy@sky.uk",
-          From    => "priya.parthasarathy@sky.uk",
+%mail = ( To      => 'priya.parthasarathy@sky.uk',
+          From    => 'priya.parthasarathy@sky.uk,
           Message => "Deploycommand"
          );
  
