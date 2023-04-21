@@ -77,4 +77,4 @@ unset GITHUB_TOKEN
 rm .githubtoken
 #/usr/bin/perl ${WORKSPACE}/sendmail.pl $recepient $deploycommand
 #${WORKSPACE}/sendmail.py  "$recepient" "$deploycommand"
-/usr/bin/perl ${WORKSPACE}/send_mail.pl $recepient $deploycommand
+#/usr/bin/perl ${WORKSPACE}/send_mail.pl $recepient $deploycommand
