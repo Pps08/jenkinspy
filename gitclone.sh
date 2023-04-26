@@ -67,6 +67,7 @@ echo "creating PR"
 #"${WORKSPACE}"\\gh auth login --with-token < "${WORKSPACE}"\\mytoken.txt
 #echo "creating Pull Request"
 #"${WORKSPACE}"\\gh pr create --head "$latest_branch" --title "$PRtitle" --body "$PRbody" --draft
+git config --global credential.helper wincred
 set +u
 echo "$GITHUB_TOKEN"
 echo "$GITHUB_TOKEN" > .githubtoken
