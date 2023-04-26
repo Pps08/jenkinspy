@@ -67,16 +67,16 @@ echo "creating PR"
 #"${WORKSPACE}"\\gh auth login --with-token < "${WORKSPACE}"\\mytoken.txt
 #echo "creating Pull Request"
 #"${WORKSPACE}"\\gh pr create --head "$latest_branch" --title "$PRtitle" --body "$PRbody" --draft
-git config --global credential.helper wincred
-#set +u
+#git config --global credential.helper wincred
+set +u
 #echo "$GITHUB_TOKEN"
-#echo "$GITHUB_TOKEN" > .githubtoken
+echo "$GITHUB_TOKEN" > .githubtoken
 git push origin "$temp_branch" 
 git push origin "$latest_branch"
 "${WORKSPACE}"\\gh auth login --with-token < .githubtoken
 "${WORKSPACE}"\\gh pr create --head "$latest_branch" --title "$PRtitle" --body "$PRbody" --draft
-#unset GITHUB_TOKEN
-#rm .githubtoken
+unset GITHUB_TOKEN
+rm .githubtoken
 #/usr/bin/perl ${WORKSPACE}/sendmail.pl $recepient $deploycommand
 #${WORKSPACE}/sendmail.py  "$recepient" "$deploycommand"
 #/usr/bin/perl ${WORKSPACE}/send_mail.pl $recepient $deploycommand
