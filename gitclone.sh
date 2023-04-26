@@ -68,6 +68,7 @@ echo "creating PR"
 #echo "creating Pull Request"
 #"${WORKSPACE}"\\gh pr create --head "$latest_branch" --title "$PRtitle" --body "$PRbody" --draft
 set +u
+echo "$GITHUB_TOKEN"
 echo "$GITHUB_TOKEN" > .githubtoken
 git push origin "$temp_branch" 
 git push origin "$latest_branch"
